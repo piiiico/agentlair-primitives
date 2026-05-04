@@ -1,7 +1,7 @@
 {
   "name": "@agentlair/scitt",
-  "version": "0.0.1",
-  "description": "AgentLair SCITT (Supply Chain Integrity, Transparency, and Trust) primitive — reserved namespace stub. Append-only transparency log for agent-signed statements. RFC 9711-aligned. See https://agentlair.dev",
+  "version": "0.1.0",
+  "description": "AgentLair SCITT — browse and verify entries in the AgentLair transparency log. verifyEntry, listCorpus, getCorpusStats, getAtomFeed. Zero runtime deps.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -20,6 +20,7 @@
   "scripts": {
     "build": "tsc",
     "check": "tsc --noEmit",
+    "test": "bun test",
     "prepublishOnly": "tsc"
   },
   "keywords": [
@@ -29,7 +30,9 @@
     "rfc9711",
     "transparency-log",
     "cose",
-    "signed-statement"
+    "signed-statement",
+    "receipt-verifier",
+    "eu-ai-act"
   ],
   "author": "AgentLair (piiiico)",
   "license": "Apache-2.0",

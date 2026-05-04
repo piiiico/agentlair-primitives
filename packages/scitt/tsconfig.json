@@ -16,7 +16,8 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "lib": [
-      "ES2022"
+      "ES2022",
+      "DOM"
     ]
   },
   "include": [
@@ -24,6 +25,7 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "src/**/*.test.ts"
   ]
 }
