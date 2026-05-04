@@ -1,0 +1,33 @@
+# Smithery configuration for @agentlair/mcp-server
+# Stdio MCP server — installs from npm via npx, no host required.
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      agentLairAat:
+        type: string
+        description: >
+          Optional AgentLair Agent Authentication Token (AAT). When set, paid
+          endpoints (verify_agent, check_trust_gate) bypass the x402 0.01 USDC
+          payment gate. Without this, those tools return the payment
+          requirements as structured output instead of failing.
+      agentLairBaseUrl:
+        type: string
+        description: >
+          Override the AgentLair API base URL. Default
+          https://api.agentlair.dev — change only for local worker dev.
+        default: "https://api.agentlair.dev"
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "@agentlair/mcp-server"],
+      env: {
+        ...(config.agentLairAat ? { AGENTLAIR_AAT: config.agentLairAat } : {}),
+        ...(config.agentLairBaseUrl ? { AGENTLAIR_BASE_URL: config.agentLairBaseUrl } : {})
+      }
+    })
+  exampleConfig:
+    agentLairBaseUrl: "https://api.agentlair.dev"

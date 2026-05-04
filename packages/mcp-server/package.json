@@ -1,0 +1,68 @@
+{
+  "name": "@agentlair/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for AgentLair — exposes agent trust verification, PoPA streaks, and audit lookup as native tools for Claude desktop, Cursor, Cline, and any MCP client.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "agentlair-mcp-server": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "smithery.yaml"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js",
+    "check": "tsc --noEmit",
+    "test": "bun test",
+    "start": "node dist/cli.js",
+    "prepublishOnly": "tsc && chmod +x dist/cli.js"
+  },
+  "keywords": [
+    "agentlair",
+    "agent-trust",
+    "mcp",
+    "model-context-protocol",
+    "claude-desktop",
+    "cursor",
+    "cline",
+    "smithery",
+    "popa",
+    "trust-verification",
+    "agent-identity",
+    "did",
+    "x402"
+  ],
+  "author": "AgentLair (piiiico)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piiiico/agentlair-primitives",
+    "directory": "packages/mcp-server"
+  },
+  "homepage": "https://agentlair.dev/specs/mcp-server",
+  "bugs": {
+    "url": "https://github.com/piiiico/agentlair-primitives/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
