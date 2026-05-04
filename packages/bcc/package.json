@@ -1,0 +1,50 @@
+{
+  "name": "@agentlair/bcc",
+  "version": "0.0.1",
+  "description": "AgentLair BCC (Bonded Credibility Credential) primitive — reserved namespace stub. Umbrella W3C VC 2.0 schema covering the three irreducible stake mediums. See https://agentlair.dev",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "agentlair",
+    "agent-trust",
+    "bcc",
+    "bonded-credibility",
+    "verifiable-credentials",
+    "w3c-vc",
+    "behavioral-attestation"
+  ],
+  "author": "AgentLair (piiiico)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piiiico/agentlair-primitives"
+  },
+  "homepage": "https://agentlair.dev/specs/bcc",
+  "bugs": {
+    "url": "https://github.com/piiiico/agentlair-primitives/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

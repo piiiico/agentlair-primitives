@@ -1,0 +1,53 @@
+{
+  "name": "@agentlair/popa",
+  "version": "0.1.0",
+  "description": "Proof of Persistent Activity — verify daily attestation streaks anchored to SCITT. Client SDK for the AgentLair PoPA primitive.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "test": "bun test",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "agentlair",
+    "agent-trust",
+    "popa",
+    "proof-of-persistent-activity",
+    "behavioral-attestation",
+    "attestation-streak",
+    "scitt",
+    "did",
+    "agent-identity"
+  ],
+  "author": "AgentLair (piiiico)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piiiico/agentlair-primitives"
+  },
+  "homepage": "https://agentlair.dev/specs/popa",
+  "bugs": {
+    "url": "https://github.com/piiiico/agentlair-primitives/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

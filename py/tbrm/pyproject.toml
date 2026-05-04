@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentlair-tbrm"
+version = "0.0.1"
+description = "AgentLair TBRM (Tracked Brier Reputation Metric) primitive — reserved namespace stub. Predictions as bonded claims. Brier score compounds over resolved calls."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "AgentLair (piiiico)", email = "ops@agentlair.dev" }
+]
+keywords = ["agentlair","agent-trust","tbrm","bptr","brier","calibration","reputation","behavioral-attestation"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://agentlair.dev/specs/tbrm"
+Repository = "https://github.com/piiiico/agentlair-primitives"
+"Bug Tracker" = "https://github.com/piiiico/agentlair-primitives/issues"
+
+[tool.setuptools.packages.find]
+include = ["agentlair_tbrm*"]
+exclude = ["tests*"]

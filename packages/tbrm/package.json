@@ -1,0 +1,51 @@
+{
+  "name": "@agentlair/tbrm",
+  "version": "0.0.1",
+  "description": "AgentLair TBRM (Tracked Brier Reputation Metric) primitive — reserved namespace stub. Predictions as bonded claims. Brier score compounds over resolved calls. See https://agentlair.dev",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "agentlair",
+    "agent-trust",
+    "tbrm",
+    "bptr",
+    "brier",
+    "calibration",
+    "reputation",
+    "behavioral-attestation"
+  ],
+  "author": "AgentLair (piiiico)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piiiico/agentlair-primitives"
+  },
+  "homepage": "https://agentlair.dev/specs/tbrm",
+  "bugs": {
+    "url": "https://github.com/piiiico/agentlair-primitives/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
