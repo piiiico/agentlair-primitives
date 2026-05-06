@@ -1,0 +1,62 @@
+{
+  "name": "@agentlair/langchain",
+  "version": "0.2.1",
+  "description": "AgentLair adapter for LangChain.js — issue per-agent AATs, attach Bearer tokens to tool calls, emit audit envelopes per invocation.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "test": "bun test",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "agentlair",
+    "agent-trust",
+    "langchain",
+    "langchainjs",
+    "agent-identity",
+    "aat",
+    "audit",
+    "did-web",
+    "behavioral-attestation",
+    "agent-authentication-token"
+  ],
+  "author": "AgentLair (piiiico)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piiiico/agentlair-primitives"
+  },
+  "homepage": "https://agentlair.dev",
+  "bugs": {
+    "url": "https://github.com/piiiico/agentlair-primitives/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@langchain/core": ">=0.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@langchain/core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
